@@ -46,7 +46,7 @@ class Player(pygame.sprite.Sprite):
                     #left
                     if self.rect.left <= sprite.rect.right and self.old_rect.left >= sprite.old_rect.right:
                         # Si le côté gauche du joueur est entré en collision avec le côté droit du sprite
-                        # ET que dans la position précédente le joueur était encore à droite du sprite (donc il venait de la droite),
+                        # ET que dans la position précédente le joueur était encore à droite du sprite (donc il venait de la droite)
                         # alors on considère que le joueur percute le sprite par la gauche.
                         self.rect.left = sprite.rect.right
 

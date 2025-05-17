@@ -4,7 +4,7 @@ import pygame
 from pygame import Clock
 
 from settings import *
-from level.level import Level
+from level import Level
 from pytmx.util_pygame import load_pygame
 from os.path import join
 

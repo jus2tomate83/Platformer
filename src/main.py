@@ -1,7 +1,5 @@
-from settings import *
 from level import Level
 from pytmx.util_pygame import load_pygame
-from os.path import join
 
 from support import *
 
@@ -21,14 +19,15 @@ class Game:
             'flag' :import_folder('..','res','graphics','level','flag'),
             'saw' :import_folder('..','res','graphics','enemies','saw', 'animation'),
             'floor_spike': import_folder('..', 'res', 'graphics', 'enemies', 'floor_spikes'),
-            'palms': import_folder('..', 'res', 'graphics', 'level', 'palms'),
+            'palms': import_sub_folders('..', 'res', 'graphics', 'level', 'palms'),
             'candle': import_folder('..', 'res', 'graphics', 'level', 'candle'),
             'window': import_folder('..', 'res', 'graphics', 'level', 'window'),
             'big_chain': import_folder('..', 'res', 'graphics', 'level', 'big_chain'),
             'small_chain': import_folder('..', 'res', 'graphics', 'level', 'small_chain'),
             'candle_light': import_folder('..', 'res', 'graphics', 'level', 'candle_light'),
-            'player': import_folder('..','graphics','player')
+            'player': import_sub_folders('..','res', 'graphics','player')
         }
+        print("Player frame keys:", self.level_frames['palms'].keys())  # Debug print
 
     def run(self):
         while True:
